@@ -1,0 +1,19 @@
+{
+  "name": "cookies.js",
+  "version": "1.0.0",
+  "description": "Simple cookie framework with full Unicode support ",
+  "main": "cookies.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madmurphy/cookies.js.git"
+  },
+  "author": "madmurphy",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/madmurphy/cookies.js/issues"
+  },
+  "homepage": "https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework"
+}
