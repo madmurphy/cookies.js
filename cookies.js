@@ -62,3 +62,7 @@ var docCookies = {
 		return aKeys;
 	}
 };
+
+if(typeof module !== "undefined" && typeof module.exports !== "undefined") {
+	module.exports = docCookies;
+}
