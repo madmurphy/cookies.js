@@ -23,7 +23,7 @@
 |*|
 \*/
 
-module.exports = {
+var docCookies = {
 	getItem: function (sKey) {
 		if (!sKey) { return null; }
 		return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
@@ -62,3 +62,7 @@ module.exports = {
 		return aKeys;
 	}
 };
+
+if(typeof module !== "undefined" && typeof module.exports !== "undefined") {
+	module.exports = docCookies;
+}
