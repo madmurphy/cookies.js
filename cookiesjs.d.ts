@@ -7,7 +7,8 @@ interface IDocCookies {
         vEnd?: number | string | Date,
         sPath?: string,
         sDomain?: string,
-        bSecure?: string
+        bSecure?: string,
+        bHttpOnly?: string
     ): boolean;
 
     removeItem(sKey: string, sPath?: string, sDomain?: string): boolean;

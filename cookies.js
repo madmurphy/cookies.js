@@ -15,7 +15,7 @@
 |*|
 |*|	Syntaxes:
 |*|
-|*|	* docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
+|*|	* docCookies.setItem(name, value[, end[, path[, domain[, secure[, HttpOnly]]]]])
 |*|	* docCookies.getItem(name)
 |*|	* docCookies.removeItem(name[, path[, domain]])
 |*|	* docCookies.hasItem(name)
@@ -28,7 +28,7 @@ var docCookies = {
 		if (!sKey) { return null; }
 		return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
 	},
-	setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+	setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure, bHttpOnly) {
 		if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
 		var sExpires = "";
 		if (vEnd) {
@@ -44,7 +44,7 @@ var docCookies = {
 					break;
 			}
 		}
-		document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+		document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "") + (bHttpOnly ? "; HttpOnly" : "");
 		return true;
 	},
 	removeItem: function (sKey, sPath, sDomain) {
