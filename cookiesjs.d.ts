@@ -1,4 +1,5 @@
 interface IDocCookies {
+
     getItem(sKey: string): string;
 
     setItem(
@@ -8,7 +9,6 @@ interface IDocCookies {
         sPath?: string,
         sDomain?: string,
         bSecure?: string,
-        bHttpOnly?: string
     ): boolean;
 
     removeItem(sKey: string, sPath?: string, sDomain?: string): boolean;
@@ -16,6 +16,7 @@ interface IDocCookies {
     hasItem(sKey: string): boolean;
 
     keys(): string[];
+
 }
 
 declare var docCookies: IDocCookies;
