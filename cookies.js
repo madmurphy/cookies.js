@@ -4,7 +4,7 @@
 |*|
 |*|	A complete cookies reader/writer framework with full unicode support.
 |*|
-|*|	Revision #1 - September 4, 2014
+|*|	Revision #2 - June 13th, 2017
 |*|
 |*|	https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
 |*|	https://developer.mozilla.org/User:fusionchess
