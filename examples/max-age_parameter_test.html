@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>max-age parameter test</title>
+<script type="text/javascript" src="../cookies.js"></script>
+<script type="text/javascript">
+
+var bClean, nDeltaT, nMaxAge = 5;
+
+if (docCookies.hasItem("maxAgeTesting")) {
+
+	nDeltaT = (Date.now() - parseFloat(docCookies.getItem("maxAgeTesting"))) / 1e3;
+
+	if (nMaxAge >= nDeltaT) {
+		alert(":: max-age parameter test ::\n\nPlease reload this page in " + (nMaxAge - nDeltaT).toFixed(2) + " seconds.");
+		bClean = false;
+	} else if (docCookies.hasItem("maxAgeCookie")) {
+		bClean = confirm(":: max-age parameter test ::\n\nSorry, cookie still there after " + nDeltaT.toFixed(2) + " seconds. Do you want to erase it manually?");
+		bClean && docCookies.removeItem("maxAgeCookie");
+	} else {
+		alert(":: max-age parameter test ::\n\nCongratulations! Cookie expired after " + nMaxAge + " seconds! Your browser supports the max-age parameter!");
+		bClean = true;
+	}
+
+	bClean && docCookies.removeItem("maxAgeTesting");
+
+} else {
+
+	docCookies.setItem("maxAgeTesting", Date.now(), Infinity);
+	docCookies.setItem("maxAgeCookie", "Hello world!", nMaxAge);
+	alert(":: max-age parameter test ::\n\nTemporary cookie sent. Please reload this page in " + nMaxAge + " seconds.");
+
+}
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

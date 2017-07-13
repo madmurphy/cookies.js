@@ -4,7 +4,7 @@
 |*|
 |*|	A complete cookies reader/writer framework with full unicode support.
 |*|
-|*|	Revision #2 - June 13th, 2017
+|*|	Revision #3 - July 13th, 2017
 |*|
 |*|	https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
 |*|	https://developer.mozilla.org/User:fusionchess
@@ -35,6 +35,15 @@ var docCookies = {
 			switch (vEnd.constructor) {
 				case Number:
 					sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+					/*
+					Note: Despite officially defined in RCF6265, the use of `max-age` is not compatible with any
+					version of Internet Explorer, Edge and some mobile browsers. Therefore passing a number to
+					the end parameter might not work as expected. A possible solution might be to convert the the
+					relative time to an absolute time. For instance, replacing the previous line with:
+					*/
+					/*
+					sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; expires=" + (new Date(vEnd * 1e3 + Date.now())).toUTCString();
+					*/
 					break;
 				case String:
 					sExpires = "; expires=" + vEnd;
