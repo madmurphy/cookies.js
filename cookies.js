@@ -36,7 +36,7 @@ var docCookies = {
 				case Number:
 					sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
 					/*
-					Note: Despite officially defined in RCF6265, the use of `max-age` is not compatible with any
+					Note: Despite officially defined in RFC 6265, the use of `max-age` is not compatible with any
 					version of Internet Explorer, Edge and some mobile browsers. Therefore passing a number to
 					the end parameter might not work as expected. A possible solution might be to convert the the
 					relative time to an absolute time. For instance, replacing the previous line with:
