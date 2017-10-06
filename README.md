@@ -65,7 +65,7 @@ The [`max-age`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie
 > can be rewritten using an absolute date, as in the following example:
 > 
 > ```js
-> `function maxAgeToGMT (nMaxAge) {
+> function maxAgeToGMT (nMaxAge) {
 >   return nMaxAge === Infinity ? "Fri, 31 Dec 9999 23:59:59 GMT" : (new Date(nMaxAge * 1e3 + Date.now())).toUTCString();
 > }
 > 
