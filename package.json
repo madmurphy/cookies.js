@@ -1,6 +1,6 @@
 {
-  "name": "cookies.js",
-  "version": "1.0.0",
+  "name": "doc-cookies",
+  "version": "1.1.0",
   "description": "Simple cookie framework with full Unicode support ",
   "main": "cookies.js",
   "scripts": {
