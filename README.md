@@ -215,7 +215,43 @@ docCookies.keys()
 
 ##### Description
 
-Returns an array of all readable cookies from this location.
+Returns an array of all cookies readable from this location.
+
+
+### Clear all cookies
+
+
+##### Syntax
+
+```js
+docCookies.clear([path[, domain]])
+```
+
+
+##### Description
+
+Clears all cookies readable from this location.
+
+
+##### Parameters
+
+<dl><dt>
+
+`path` _(optional)_
+
+</dt><dd>
+
+E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)). The path must be _absolute_ (see [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)). For more information on how to use relative paths in this argument, see [this paragraph](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#Using_relative_URLs_in_the_path_parameter).
+
+</dd><dt>
+
+`domain` _(optional)_
+
+</dt><dd>
+
+E.g., `"example.com"`, or `"subdomain.example.com"`; if not specified, defaults to the host portion of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)), but not including subdomains. Contrary to earlier specifications, leading dots in domain names are ignored. If a domain is specified, subdomains are always included.
+
+</dd></dl>
 
 
 ### Example usage:

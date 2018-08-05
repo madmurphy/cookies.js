@@ -17,6 +17,8 @@ interface IDocCookies {
 
     keys(): string[];
 
+    clear(): void;
+
 }
 
 declare var docCookies: IDocCookies;
