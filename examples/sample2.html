@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src='../cookies_min.js'></script>
+    <script>
+        $(function () {
+            $('#setCookiesBtn').on('click', function () {
+                docCookies.setItem('c1', '1',10);
+                docCookies.setItem('c2', '2');
+                docCookies.setItem('c3', '3',Infinity);
+            });
+
+            $('#clearCookiesBtn').on('click', function () {
+                docCookies.clear();
+            });
+        document.cookie="sessionid=38afes7a8; HttpOnly;";
+        });
+    </script>
+</head>
+
+<body>
+    <button id='setCookiesBtn'>set cookies</button>
+    <button id='clearCookiesBtn'>clear cookies</button>
+</body>
+
+</html>
