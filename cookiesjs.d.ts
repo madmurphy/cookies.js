@@ -17,7 +17,7 @@ interface IDocCookies {
 
     keys(): string[];
 
-    clear(): void;
+    clear(sPath?: string, sDomain?: string): void;
 
 }
 

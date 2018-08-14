@@ -4,7 +4,7 @@
 |*|
 |*|	A complete cookies reader/writer framework with full unicode support.
 |*|
-|*|	Revision #4 - August 5th, 2018
+|*|	Revision #5 - August 14th, 2018
 |*|
 |*|	https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
 |*|	https://developer.mozilla.org/User:fusionchess
@@ -75,8 +75,8 @@ var docCookies = {
 	},
 	clear: function (sPath, sDomain) {
 		var aKeys = this.keys();
-		for (var sKey of aKeys) {
-			this.removeItem(sKey, sPath, sDomain);
+		for (var nLen = aKeys.length, nIdx = 0; nIdx < nLen; nIdx++) {
+			this.removeItem(aKeys[nIdx], sPath, sDomain);
 		}
 	}
 };
