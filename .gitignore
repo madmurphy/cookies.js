@@ -1,0 +1,22 @@
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+#log files
+*.log
+
+#bak files
+~*
+*.bak
+
+#archives
+*.zip
+*.rar
+
+#PhpStorm
+.idea/
+
+#node
+node_modules/

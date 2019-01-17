@@ -281,3 +281,15 @@ alert(docCookies.getItem());
 alert(docCookies.getItem("test1;="));
 ```
 
+For contributors
+-----
+
+If you plan to modify the source code or make PR to this project, please, keep in mind the following information.
+
+### Minification and source map
+
+We use [Grunt](https://gruntjs.com/) plugins to minify the JS and build the source map file. Grunt and Grunt plugins are installed and managed via [npm](https://www.npmjs.org/), the [Node.js](https://nodejs.org/) package manager. Use the following instructions to install them:
+- [Download and install Node.js with npm](https://nodejs.org/en/download/)
+- Install Grunt by command `npm install` in the root of the project.
+
+Now you can run the `default` task in Grunt that will minify the JS and generate the source map file. You can run it either with your IDE or by typing `grunt` command in the command line in the root of the project.
