@@ -69,7 +69,7 @@ The [`max-age`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie
 >   return nMaxAge === Infinity ? "Fri, 31 Dec 9999 23:59:59 GMT" : (new Date(nMaxAge * 1e3 + Date.now())).toUTCString();
 > }
 > 
-> docCookies.setItem("mycookie", "Hello world!", maxAgeToGMT(150));`
+> docCookies.setItem("mycookie", "Hello world!", maxAgeToGMT(150));
 > ```
 > 
 > In the code above the function `maxAgeToGMT()` is used to create a [`GMTString`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString) from a relative time (i.e., from an "age").
