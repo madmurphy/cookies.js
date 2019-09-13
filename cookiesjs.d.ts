@@ -9,6 +9,7 @@ interface IDocCookies {
         sPath?: string,
         sDomain?: string,
         bSecure?: string,
+        sSamesite?: string
     ): boolean;
 
     removeItem(sKey: string, sPath?: string, sDomain?: string): boolean;

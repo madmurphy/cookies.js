@@ -18,7 +18,7 @@ Usage
 ##### Syntax
 
 ```js
-docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
+docCookies.setItem(name, value[, end[, path[, domain[, secure[, samesite]]]]])
 ```
 
 
@@ -97,6 +97,14 @@ The [`domain`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#
 </dt><dd>
 
 The cookie will be transmitted only over [`secure`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_secure) protocol as https ([`boolean`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Boolean) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)).
+
+</dd><dt>
+
+`samesite` _(optional)_
+
+</dt><dd>
+
+The [`samesite`](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie#new-cookie_samesite) prevents the browser from sending this cookie along with cross-site requests. Possible values are `lax` or `strict` ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)).
 
 </dd></dl>
 
