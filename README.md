@@ -24,7 +24,7 @@ docCookies.setItem(name, value[, end[, path[, domain[, secure[, samesite]]]]])
 
 ##### Description
 
-Create/overwrite a cookie.
+Create/overwrite a cookie
 
 
 ##### Parameters
@@ -35,7 +35,7 @@ Create/overwrite a cookie.
 
 </dt><dd>
 
-The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to create/overwrite ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)).
+The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to create/overwrite ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String))
 
 </dd><dt>
 
@@ -43,7 +43,7 @@ The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-
 
 </dt><dd>
 
-The [value](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)).
+The [value](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String))
 
 </dd><dt>
 
@@ -51,7 +51,7 @@ The [value](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new
 
 </dt><dd>
 
-The [`max-age`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_max-age) in seconds (e.g. `31536e3` for a year, [`Infinity`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Infinity) for a never-expire cookie), or the [`expires`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_expires) date in [`GMTString`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString) format or as [`Date` object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date); if not, the specified the cookie will expire at the end of the session ([`number`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Number) &ndash; finite or [`Infinity`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Infinity) &ndash; [`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String), [`Date` object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)).
+The [`max-age`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_max-age) in seconds (e.g. `31536e3` for a year, [`Infinity`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Infinity) for a never-expire cookie), or the [`expires`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_expires) date in [`GMTString`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString) format or as [`Date` object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date); if not, the specified the cookie will expire at the end of the session ([`number`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Number) &ndash; finite or [`Infinity`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Infinity) &ndash; [`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String), [`Date` object](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null))
 
 </dd></dl>
 
@@ -69,7 +69,7 @@ The [`max-age`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie
 >   return nMaxAge === Infinity ? "Fri, 31 Dec 9999 23:59:59 GMT" : (new Date(nMaxAge * 1e3 + Date.now())).toUTCString();
 > }
 > 
-> docCookies.setItem("mycookie", "Hello world!", maxAgeToGMT(150));
+> docCookies.setItem("mycookie", "Hello world!", maxAgeToGMT(150));`
 > ```
 > 
 > In the code above the function `maxAgeToGMT()` is used to create a [`GMTString`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date/toGMTString) from a relative time (i.e., from an "age").
@@ -80,7 +80,7 @@ The [`max-age`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie
 
 </dt><dd>
 
-The [`path`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_path) from where the cookie will be readable. E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)). The path must be _absolute_ (see [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)). For more information on how to use relative paths in this argument, see [this paragraph](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#Using_relative_URLs_in_the_path_parameter).
+The [`path`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_path) from where the cookie will be readable &ndash; e.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)); the path must be _absolute_ (see [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)) &ndash; for more information on how to use relative paths in this argument, see [this paragraph](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#Using_relative_URLs_in_the_path_parameter)
 
 </dd><dt>
 
@@ -88,7 +88,7 @@ The [`path`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#ne
 
 </dt><dd>
 
-The [`domain`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_domain) from where the cookie will be readable. E.g., `"example.com"`, `".example.com"` (includes all subdomains) or `"subdomain.example.com"`; if not specified, defaults to the host portion of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)).
+The [`domain`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_domain) from where the cookie will be readable &ndash; e.g., `"example.com"`, `".example.com"` (includes all subdomains) or `"subdomain.example.com"`; if not specified, defaults to the host portion of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null))
 
 </dd><dt>
 
@@ -96,7 +96,7 @@ The [`domain`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#
 
 </dt><dd>
 
-The cookie will be transmitted only over [`secure`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_secure) protocol as https ([`boolean`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Boolean) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)).
+The cookie will be transmitted only over [`secure`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_secure) protocol as https ([`boolean`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Boolean) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null))
 
 </dd><dt>
 
@@ -104,7 +104,11 @@ The cookie will be transmitted only over [`secure`](https://developer.mozilla.or
 
 </dt><dd>
 
-The [`samesite`](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie#new-cookie_samesite) prevents the browser from sending this cookie along with cross-site requests. Possible values are `lax` or `strict` ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)).
+Prevents the browser from sending the cookie along with cross-site requests (see [`samesite`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_samesite) flag); possible values are:
+
+1. `"no_restriction"` (case insensitive) or [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or `false` or `0` or a negative number: the cookie will allow cross-site requests
+2. `"lax"` (case insensitive) or `1` or `true`: cookies will only be sent for TOP LEVEL navigation GET requests &ndash; this is sufficient for user tracking, but it will prevent many CSRF attacks
+3. `"strict"` (case insensitive) or any other value not matching 1. and 2.: the `strict` flag will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link
 
 </dd></dl>
 
@@ -121,7 +125,7 @@ docCookies.getItem(name)
 
 ##### Description
 
-Read a cookie. If the cookie doesn't exist a [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) value will be returned.
+Read a cookie; if the cookie doesn't exist or is not reachable from the current location a [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) value will be returned
 
 
 ##### Parameters
@@ -132,7 +136,7 @@ Read a cookie. If the cookie doesn't exist a [`null`](https://developer.mozilla.
 
 </dt><dd>
 
-The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to read ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)).
+The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to read ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String))
 
 </dd></dl>
 
@@ -143,13 +147,13 @@ The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-
 ##### Syntax
 
 ```js
-docCookies.removeItem(name[, path[, domain]])
+docCookies.removeItem(name[, path[, domain[, secure[, samesite]]]])
 ```
 
 
 ##### Description
 
-Delete a cookie.
+Delete a cookie
 
 
 ##### Parameters
@@ -160,7 +164,7 @@ Delete a cookie.
 
 </dt><dd>
 
-The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to remove ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)).
+The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to remove ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String))
 
 </dd><dt>
 
@@ -168,7 +172,7 @@ The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-
 
 </dt><dd>
 
-E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)). The path must be _absolute_ (see [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)). For more information on how to use relative paths in this argument, see [this paragraph](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#Using_relative_URLs_in_the_path_parameter).
+E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)); the path must be _absolute_ (see [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)) &ndash; for more information on how to use relative paths in this argument, see [this paragraph](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#Using_relative_URLs_in_the_path_parameter)
 
 </dd><dt>
 
@@ -176,7 +180,27 @@ E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the c
 
 </dt><dd>
 
-E.g., `"example.com"`, or `"subdomain.example.com"`; if not specified, defaults to the host portion of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)), but not including subdomains. Contrary to earlier specifications, leading dots in domain names are ignored. If a domain is specified, subdomains are always included.
+E.g., `"example.com"`, or `"subdomain.example.com"`; if not specified, defaults to the host portion of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)), but not including subdomains; contrary to earlier specifications, leading dots in domain names are ignored; if a domain is specified, subdomains are always included
+
+</dd><dt>
+
+`secure` _(optional)_
+
+</dt><dd>
+
+The cookie will be removed only over [`secure`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_secure) protocol as https ([`boolean`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Boolean) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null))
+
+</dd><dt>
+
+`samesite` _(optional)_
+
+</dt><dd>
+
+Prevents the browser from removing the cookie as a cross-site request (see [`samesite`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_samesite) flag); possible values are:
+
+1. `"no_restriction"` (case insensitive) or [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or `false` or `0` or a negative number: the cookie will allow cross-site requests
+2. `"lax"` (case insensitive) or `1` or `true`: cookies will only be sent for TOP LEVEL navigation GET requests &ndash; this is sufficient for user tracking, but it will prevent many CSRF attacks
+3. `"strict"` (case insensitive) or any other value not matching 1. and 2.: the `strict` flag will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link
 
 </dd></dl>
 
@@ -195,7 +219,7 @@ docCookies.hasItem(name)
 
 ##### Description
 
-Check whether a cookie exists in the current position.
+Check whether a cookie exists and is reachable from the current location
 
 
 ##### Parameters
@@ -206,7 +230,7 @@ Check whether a cookie exists in the current position.
 
 </dt><dd>
 
-The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to test ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String)).
+The [name](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_syntax) of the cookie to test ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String))
 
 </dd></dl>
 
@@ -223,7 +247,7 @@ docCookies.keys()
 
 ##### Description
 
-Returns an array of all cookies readable from this location.
+Return an array of all cookies readable from the current location
 
 
 ### Clear all cookies
@@ -232,13 +256,13 @@ Returns an array of all cookies readable from this location.
 ##### Syntax
 
 ```js
-docCookies.clear([path[, domain]])
+docCookies.clear([path[, domain[, secure[, samesite]]]])
 ```
 
 
 ##### Description
 
-Clears all cookies readable from this location.
+Clear all cookies readable from the current location
 
 
 ##### Parameters
@@ -249,7 +273,7 @@ Clears all cookies readable from this location.
 
 </dt><dd>
 
-E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)). The path must be _absolute_ (see [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)). For more information on how to use relative paths in this argument, see [this paragraph](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#Using_relative_URLs_in_the_path_parameter).
+E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)); the path must be _absolute_ (see [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)) &ndash; for more information on how to use relative paths in this argument, see [this paragraph](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#Using_relative_URLs_in_the_path_parameter)
 
 </dd><dt>
 
@@ -257,7 +281,27 @@ E.g., `"/"`, `"/mydir"`; if not specified, defaults to the current path of the c
 
 </dt><dd>
 
-E.g., `"example.com"`, or `"subdomain.example.com"`; if not specified, defaults to the host portion of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)), but not including subdomains. Contrary to earlier specifications, leading dots in domain names are ignored. If a domain is specified, subdomains are always included.
+E.g., `"example.com"`, or `"subdomain.example.com"`; if not specified, defaults to the host portion of the current document location ([`string`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)), but not including subdomains; contrary to earlier specifications, leading dots in domain names are ignored; if a domain is specified, subdomains are always included
+
+</dd><dt>
+
+`secure` _(optional)_
+
+</dt><dd>
+
+The cookies will be removed only over [`secure`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_secure) protocol as https ([`boolean`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Boolean) or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null))
+
+</dd><dt>
+
+`samesite` _(optional)_
+
+</dt><dd>
+
+Prevents the browser from clearing all the cookies as a cross-site request (see [`samesite`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_samesite) flag); possible values are:
+
+1. `"no_restriction"` (case insensitive) or [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or `false` or `0` or a negative number: the cookie will allow cross-site requests
+2. `"lax"` (case insensitive) or `1` or `true`: cookies will only be sent for TOP LEVEL navigation GET requests &ndash; this is sufficient for user tracking, but it will prevent many CSRF attacks
+3. `"strict"` (case insensitive) or any other value not matching 1. and 2.: the `strict` flag will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link
 
 </dd></dl>
 
@@ -289,15 +333,3 @@ alert(docCookies.getItem());
 alert(docCookies.getItem("test1;="));
 ```
 
-For contributors
------
-
-If you plan to modify the source code or make PR to this project, please, keep in mind the following information.
-
-### Minification and source map
-
-We use [Grunt](https://gruntjs.com/) plugins to minify the JS and build the source map file. Grunt and Grunt plugins are installed and managed via [npm](https://www.npmjs.org/), the [Node.js](https://nodejs.org/) package manager. Use the following instructions to install them:
-- [Download and install Node.js with npm](https://nodejs.org/en/download/)
-- Install Grunt by command `npm install` in the root of the project.
-
-Now you can run the `default` task in Grunt that will minify the JS and generate the source map file. You can run it either with your IDE or by typing `grunt` command in the command line in the root of the project.

@@ -8,17 +8,28 @@ interface IDocCookies {
         vEnd?: number | string | Date,
         sPath?: string,
         sDomain?: string,
-        bSecure?: string,
-        sSamesite?: string
+        bSecure?: boolean,
+        vSameSite?: string | number
     ): boolean;
 
-    removeItem(sKey: string, sPath?: string, sDomain?: string): boolean;
+    removeItem(
+        sKey: string,
+        sPath?: string,
+        sDomain?: string,
+        bSecure?: boolean,
+        vSameSite?: string | number
+    ): boolean;
 
     hasItem(sKey: string): boolean;
 
     keys(): string[];
 
-    clear(sPath?: string, sDomain?: string): void;
+    clear(
+        sPath?: string,
+        sDomain?: string,
+        bSecure?: boolean,
+        vSameSite?: string | number
+    ): void;
 
 }
 
