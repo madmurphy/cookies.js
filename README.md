@@ -106,9 +106,10 @@ The cookie will be transmitted only over [`secure`](https://developer.mozilla.or
 
 Prevents the browser from sending the cookie along with cross-site requests (see [`samesite`](https://developer.mozilla.org/en-US/docs/Web/API/document/cookie#new-cookie_samesite) flag); possible values are:
 
-1. `"no_restriction"` (case insensitive) or [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or `false` or `0` or a negative number: the cookie will allow cross-site requests
-2. `"lax"` (case insensitive) or `1` or `true`: cookies will only be sent for TOP LEVEL navigation GET requests &ndash; this is sufficient for user tracking, but it will prevent many CSRF attacks
-3. `"strict"` (case insensitive) or any other value not matching 1. and 2.: the `strict` flag will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link
+1. `"no_restriction"` (case insensitive) or [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). or [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) or `false` or `0`: don't express any preference (in most cases this means that the cookie will allow cross-site requests, but this is likely going to change in the future)
+2. `"none"` (case insensitive) or a negative number: the cookie will allow cross-site requests (experimental)
+3. `"lax"` (case insensitive) or `1` or `true`: cookies will only be sent for TOP LEVEL navigation GET requests &ndash; this is sufficient for user tracking, but it will prevent many CSRF attacks
+4. `"strict"` (case insensitive) or any other value not matching the previous cases: the `strict` flag will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link
 
 </dd></dl>
 

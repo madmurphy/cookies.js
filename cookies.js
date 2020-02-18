@@ -4,7 +4,7 @@
 |*|
 |*|	A complete cookies reader/writer framework with full unicode support.
 |*|
-|*|	Revision #7 - September 13th, 2019
+|*|	Revision #8 - February 18th, 2020
 |*|
 |*|	https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
 |*|	https://developer.mozilla.org/User:fusionchess
@@ -36,17 +36,18 @@
 
 				case Number:
 
+					sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+
 					/*
 					Note: Despite officially defined in RFC 6265, the use of `max-age` is not compatible with any
 					version of Internet Explorer, Edge and some mobile browsers. Therefore passing a number to
 					the end parameter might not work as expected. A possible solution might be to convert the the
-					relative time to an absolute time. For instance, replacing the following line with:
+					relative time to an absolute time. For instance you could replace the previous line with:
 					*/
 					/*
 					sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; expires=" + (new Date(vEnd * 1e3 + Date.now())).toUTCString();
 					*/
 
-					sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
 					break;
 
 				case String:
@@ -63,7 +64,7 @@
 
 		}
 
-		return	encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "") + (!vSameSite || vSameSite.toString().toLowerCase() === "no_restriction" || vSameSite < 0 ? "" : vSameSite.toString().toLowerCase() === "lax" || Math.ceil(vSameSite) === 1 || vSameSite === true ? "; samesite=lax" : "; samesite=strict");
+		return	encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "") + (!vSameSite || vSameSite.toString().toLowerCase() === "no_restriction" ? "" : vSameSite.toString().toLowerCase() === "lax" || Math.ceil(vSameSite) === 1 || vSameSite === true ? "; samesite=lax" : vSameSite.toString().toLowerCase() === "none" || vSameSite < 0 ? "; samesite=none" : "; samesite=strict");
 
 	}
 
@@ -137,3 +138,4 @@ if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
 	module.exports = docCookies;
 
 }
+
